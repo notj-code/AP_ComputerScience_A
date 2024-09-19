@@ -1,24 +1,14 @@
+
+
 public class Main {
     public static void main(String[] args) {
-        Cow franny = new Cow();
-        Cow gretta = new Cow("Gretta", 100, 1, false);
-        Chicken clucky =  new Chicken();
-        Chicken marshmallow = new Chicken("Sussex", 2, false, 83.5);
+        String userNum = "0704163024019", userName="김준원";
+        int wallet = 0, input = 0, output = 0;
 
-        Pig piglet = new Pig();
-        Pig pickles = new Pig("Yellow", 10, true, 567.88);
+        ATM user1 = new ATM(userName, userNum, 0, input, output, wallet);
 
-        franny.makeNoise();
-        clucky.makeNoise(); // CHICKEN
-        pickles.makeNoise(); //PIG
-        gretta.haveBirthday(); //COW
-        marshmallow.eatFood(10);
-        piglet.upgradePenSize(3);
+        wallet = ATM.putMoney(1000);
+        wallet = ATM.getMoney(10);
 
-        gretta.displayCow();
-        System.out.println("");
-        marshmallow.displayChicken();
-        System.out.println("");
-        piglet.displayPig();
     }
 }
